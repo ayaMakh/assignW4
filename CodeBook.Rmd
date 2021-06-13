@@ -1,17 +1,17 @@
 ---
+title: "Codebook"
 dataMaid: yes
-title: Codebook
-subtitle: "Details about the final dataset produced for Getting and Cleaning Data Course Project"
-date: 2021-06-13 02:03:56
-output: pdf_document
+date: "2021-06-13 02:14:23"
+output: rmarkdown::github_document
+subtitle: Final Dataset produced for Getting and Cleaning Data Course Project
 geometry: margin=2cm
 documentclass: article
 header-includes:
-  - \newcommand{\fullline}{\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}}
-  - \renewcommand\familydefault{\sfdefault}
-  - \newcommand{\bminione}{\begin{minipage}{0.75 \textwidth}}
-  - \newcommand{\bminitwo}{\begin{minipage}{0.25 \textwidth}}
-  - \newcommand{\emini}{\end{minipage}}
+- \newcommand{\fullline}{\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}}
+- \renewcommand\familydefault{\sfdefault}
+- \newcommand{\bminione}{\begin{minipage}{0.75 \textwidth}}
+- \newcommand{\bminitwo}{\begin{minipage}{0.25 \textwidth}}
+- \newcommand{\emini}{\end{minipage}}
 ---
 ```{r , echo=FALSE, include=FALSE, warning=FALSE, message=FALSE, error=FALSE}
 library("ggplot2")
@@ -2797,7 +2797,7 @@ Report generation information:
 
  *  Created by: Ayazhan Makhambetova (username: `hidden`).
 
- *  Report creation time: Sun Jun 13 2021 02:03:57
+ *  Report creation time: Sun Jun 13 2021 02:14:25
 
  *  Report was run from directory: `hidden`
 
