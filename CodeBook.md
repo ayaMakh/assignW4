@@ -2,9 +2,10 @@
 title: "Codebook"
 dataMaid: yes
 date: "2021-06-13 02:14:23"
-utput:
-  md_document:
-    variant: markdown_github
+output:
+  html_document:
+    keep_md: true
+    df_print: paged
 subtitle: Final Dataset produced for Getting and Cleaning Data Course Project
 geometry: margin=2cm
 documentclass: article
@@ -15,15 +16,9 @@ header-includes:
 - \newcommand{\bminitwo}{\begin{minipage}{0.25 \textwidth}}
 - \newcommand{\emini}{\end{minipage}}
 ---
-```{r , echo=FALSE, include=FALSE, warning=FALSE, message=FALSE, error=FALSE}
-library("ggplot2")
-library("pander")
-```
 
-```{r 'visualFunctions', echo=FALSE, include=FALSE, warning=FALSE, message=FALSE, error=FALSE}
-ggAggHist <- getFromNamespace("ggAggHist", "dataMaid")
-ggAggBarplot <- getFromNamespace("ggAggBarplot", "dataMaid")
-```
+
+
 
 # Data report overview
 The dataset examined has the following dimensions:
@@ -209,15 +204,7 @@ Reference category                1
 
 \emini
 \bminitwo
-```{r 'Var-1-Subject', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggBarplot(data = structure(list(x = structure(1:30, .Label = c("1", 
-"2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", 
-"14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", 
-"25", "26", "27", "28", "29", "30"), class = "factor"), y = c(6L, 
-6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 
-6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L, 6L)), class = "data.frame", row.names = c(NA, 
--30L)), vnam = "Subject")
-```
+![](CodeBook_files/figure-html/Var-1-Subject-1.png)<!-- -->
 
 \emini
 
@@ -249,12 +236,7 @@ Reference category            LAYING
 
 \emini
 \bminitwo
-```{r 'Var-2-Activity-Label', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggBarplot(data = structure(list(x = structure(1:6, .Label = c("LAYING", 
-"SITTING", "STANDING", "WALKING", "WALKING_DOWNSTAIRS", "WALKING_UPSTAIRS"
-), class = "factor"), y = c(30L, 30L, 30L, 30L, 30L, 30L)), class = "data.frame", row.names = c(NA, 
--6L)), vnam = "Activity Label")
-```
+![](CodeBook_files/figure-html/Var-2-Activity-Label-1.png)<!-- -->
 
 \emini
 
@@ -288,13 +270,7 @@ Min. and max.                0.22; 0.3
 
 \emini
 \bminitwo
-```{r 'Var-3-tBodyAcc-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(0.22, 0.23, 0.24, 0.25, 
-0.26, 0.27, 0.28, 0.29, 0.3), xmax = c(0.23, 0.24, 0.25, 0.26, 
-0.27, 0.28, 0.29, 0.3, 0.31), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 
-0), ymax = c(1L, 2L, 7L, 11L, 21L, 93L, 30L, 14L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tBodyAcc-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-3-tBodyAcc-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -326,14 +302,7 @@ Min. and max.                   -0.04; 0
 
 \emini
 \bminitwo
-```{r 'Var-4-tBodyAcc-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.045, -0.04, -0.035, 
--0.03, -0.025, -0.02, -0.015, -0.01, -0.005), xmax = c(-0.04, 
--0.035, -0.03, -0.025, -0.02, -0.015, -0.01, -0.005, 0), ymin = c(0, 
-0, 0, 0, 0, 0, 0, 0, 0), ymax = c(1L, 0L, 6L, 15L, 25L, 87L, 
-30L, 14L, 2L)), class = "data.frame", row.names = c(NA, -9L)), 
-    vnam = "tBodyAcc-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-4-tBodyAcc-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -365,14 +334,7 @@ Min. and max.               -0.15; -0.08
 
 \emini
 \bminitwo
-```{r 'Var-5-tBodyAcc-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.16, -0.15, -0.14, 
--0.13, -0.12, -0.11, -0.1, -0.09, -0.08), xmax = c(-0.15, -0.14, 
--0.13, -0.12, -0.11, -0.1, -0.09, -0.08, -0.07), ymin = c(0, 
-0, 0, 0, 0, 0, 0, 0, 0), ymax = c(2L, 1L, 2L, 15L, 48L, 92L, 
-16L, 3L, 1L)), class = "data.frame", row.names = c(NA, -9L)), 
-    vnam = "tBodyAcc-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-5-tBodyAcc-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -404,13 +366,7 @@ Min. and max.                  -1; 0.63
 
 \emini
 \bminitwo
-```{r 'Var-6-tBodyAcc-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-0L, 8L, 37L, 20L, 16L, 7L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tBodyAcc-std()-X")
-```
+![](CodeBook_files/figure-html/Var-6-tBodyAcc-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -442,13 +398,7 @@ Min. and max.                -0.99; 0.62
 
 \emini
 \bminitwo
-```{r 'Var-7-tBodyAcc-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 
-1L, 0L, 10L, 43L, 24L, 10L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tBodyAcc-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-7-tBodyAcc-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -480,13 +430,7 @@ Min. and max.                -0.99; 0.61
 
 \emini
 \bminitwo
-```{r 'Var-8-tBodyAcc-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 
-1L, 15L, 42L, 20L, 10L, 1L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tBodyAcc-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-8-tBodyAcc-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -518,13 +462,7 @@ Min. and max.               -0.68; 0.97
 
 \emini
 \bminitwo
-```{r 'Var-9-tGravityAcc-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.8, -0.6, -0.4, -0.2, 
-0, 0.2, 0.4, 0.6, 0.8), xmax = c(-0.6, -0.4, -0.2, 0, 0.2, 0.4, 
-0.6, 0.8, 1), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(2L, 
-13L, 9L, 6L, 0L, 0L, 1L, 6L, 143L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tGravityAcc-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-9-tGravityAcc-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -556,13 +494,7 @@ Min. and max.               -0.48; 0.96
 
 \emini
 \bminitwo
-```{r 'Var-10-tGravityAcc-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), xmax = c(-0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 
-1), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(3L, 66L, 61L, 
-14L, 11L, 5L, 10L, 10L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tGravityAcc-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-10-tGravityAcc-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -594,13 +526,7 @@ Min. and max.                -0.5; 0.96
 
 \emini
 \bminitwo
-```{r 'Var-11-tGravityAcc-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), xmax = c(-0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 
-1), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(3L, 18L, 60L, 
-63L, 13L, 7L, 10L, 6L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tGravityAcc-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-11-tGravityAcc-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -632,13 +558,7 @@ Min. and max.                  -1; -0.83
 
 \emini
 \bminitwo
-```{r 'Var-12-tGravityAcc-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.98, -0.96, -0.94, 
--0.92, -0.9, -0.88, -0.86, -0.84), xmax = c(-0.98, -0.96, -0.94, 
--0.92, -0.9, -0.88, -0.86, -0.84, -0.82), ymin = c(0, 0, 0, 0, 
-0, 0, 0, 0, 0), ymax = c(55L, 52L, 52L, 12L, 4L, 3L, 1L, 0L, 
-1L)), class = "data.frame", row.names = c(NA, -9L)), vnam = "tGravityAcc-std()-X")
-```
+![](CodeBook_files/figure-html/Var-12-tGravityAcc-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -670,13 +590,7 @@ Min. and max.               -0.99; -0.64
 
 \emini
 \bminitwo
-```{r 'Var-13-tGravityAcc-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.95, -0.9, -0.85, 
--0.8, -0.75, -0.7, -0.65), xmax = c(-0.95, -0.9, -0.85, -0.8, 
--0.75, -0.7, -0.65, -0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), 
-    ymax = c(107L, 72L, 0L, 0L, 0L, 0L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tGravityAcc-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-13-tGravityAcc-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -708,13 +622,7 @@ Min. and max.               -0.99; -0.61
 
 \emini
 \bminitwo
-```{r 'Var-14-tGravityAcc-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.95, -0.9, -0.85, 
--0.8, -0.75, -0.7, -0.65), xmax = c(-0.95, -0.9, -0.85, -0.8, 
--0.75, -0.7, -0.65, -0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), 
-    ymax = c(79L, 76L, 23L, 1L, 0L, 0L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tGravityAcc-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-14-tGravityAcc-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -746,13 +654,7 @@ Min. and max.               0.04; 0.13
 
 \emini
 \bminitwo
-```{r 'Var-15-tBodyAccJerk-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(0.04, 0.05, 0.06, 0.07, 
-0.08, 0.09, 0.1, 0.11, 0.12, 0.13), xmax = c(0.05, 0.06, 0.07, 
-0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14), ymin = c(0, 0, 0, 0, 
-0, 0, 0, 0, 0, 0), ymax = c(3L, 4L, 13L, 98L, 34L, 14L, 8L, 5L, 
-0L, 1L)), class = "data.frame", row.names = c(NA, -10L)), vnam = "tBodyAccJerk-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-15-tBodyAccJerk-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -784,14 +686,7 @@ Min. and max.               -0.04; 0.06
 
 \emini
 \bminitwo
-```{r 'Var-16-tBodyAccJerk-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.04, -0.03, -0.02, 
--0.01, 0, 0.01, 0.02, 0.03, 0.04, 0.05), xmax = c(-0.03, -0.02, 
--0.01, 0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06), ymin = c(0, 0, 
-0, 0, 0, 0, 0, 0, 0, 0), ymax = c(2L, 3L, 13L, 26L, 52L, 59L, 
-18L, 6L, 0L, 1L)), class = "data.frame", row.names = c(NA, -10L
-)), vnam = "tBodyAccJerk-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-16-tBodyAccJerk-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -823,14 +718,7 @@ Min. and max.               -0.07; 0.04
 
 \emini
 \bminitwo
-```{r 'Var-17-tBodyAccJerk-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.07, -0.06, -0.05, 
--0.04, -0.03, -0.02, -0.01, 0, 0.01, 0.02, 0.03), xmax = c(-0.06, 
--0.05, -0.04, -0.03, -0.02, -0.01, 0, 0.01, 0.02, 0.03, 0.04), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(1L, 1L, 
-    1L, 6L, 12L, 27L, 77L, 41L, 9L, 3L, 2L)), class = "data.frame", row.names = c(NA, 
--11L)), vnam = "tBodyAccJerk-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-17-tBodyAccJerk-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -862,13 +750,7 @@ Min. and max.                -0.99; 0.54
 
 \emini
 \bminitwo
-```{r 'Var-18-tBodyAccJerk-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 
-15L, 31L, 26L, 13L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyAccJerk-std()-X")
-```
+![](CodeBook_files/figure-html/Var-18-tBodyAccJerk-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -900,13 +782,7 @@ Min. and max.                -0.99; 0.36
 
 \emini
 \bminitwo
-```{r 'Var-19-tBodyAccJerk-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 10L, 28L, 
-    32L, 12L, 7L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "tBodyAccJerk-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-19-tBodyAccJerk-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -938,14 +814,7 @@ Min. and max.                -0.99; 0.03
 
 \emini
 \bminitwo
-```{r 'Var-20-tBodyAccJerk-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0), xmax = c(-0.9, -0.8, 
--0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1), ymin = c(0, 
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 11L, 16L, 19L, 
-18L, 16L, 2L, 3L, 3L, 1L)), class = "data.frame", row.names = c(NA, 
--11L)), vnam = "tBodyAccJerk-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-20-tBodyAccJerk-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -977,13 +846,7 @@ Min. and max.                -0.21; 0.19
 
 \emini
 \bminitwo
-```{r 'Var-21-tBodyGyro-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.25, -0.2, -0.15, 
--0.1, -0.05, 0, 0.05, 0.1, 0.15), xmax = c(-0.2, -0.15, -0.1, 
--0.05, 0, 0.05, 0.1, 0.15, 0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 
-0, 0), ymax = c(1L, 2L, 18L, 20L, 113L, 11L, 13L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tBodyGyro-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-21-tBodyGyro-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -1015,15 +878,7 @@ Min. and max.                 -0.2; 0.03
 
 \emini
 \bminitwo
-```{r 'Var-22-tBodyGyro-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.22, -0.2, -0.18, 
--0.16, -0.14, -0.12, -0.1, -0.08, -0.06, -0.04, -0.02, 0, 0.02
-), xmax = c(-0.2, -0.18, -0.16, -0.14, -0.12, -0.1, -0.08, -0.06, 
--0.04, -0.02, 0, 0.02, 0.04), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 
-0, 0, 0, 0, 0), ymax = c(1L, 1L, 2L, 5L, 5L, 12L, 38L, 72L, 23L, 
-9L, 5L, 5L, 2L)), class = "data.frame", row.names = c(NA, -13L
-)), vnam = "tBodyGyro-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-22-tBodyGyro-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -1055,14 +910,7 @@ Min. and max.               -0.07; 0.18
 
 \emini
 \bminitwo
-```{r 'Var-23-tBodyGyro-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.08, -0.06, -0.04, 
--0.02, 0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16), xmax = c(-0.06, 
--0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 
-0.18), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(1L, 
-1L, 1L, 3L, 2L, 4L, 11L, 36L, 74L, 23L, 8L, 13L, 3L)), class = "data.frame", row.names = c(NA, 
--13L)), vnam = "tBodyGyro-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-23-tBodyGyro-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -1094,13 +942,7 @@ Min. and max.                -0.99; 0.27
 
 \emini
 \bminitwo
-```{r 'Var-24-tBodyGyro-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 4L, 51L, 31L, 
-    3L, 0L, 1L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "tBodyGyro-std()-X")
-```
+![](CodeBook_files/figure-html/Var-24-tBodyGyro-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -1132,13 +974,7 @@ Min. and max.                -0.99; 0.48
 
 \emini
 \bminitwo
-```{r 'Var-25-tBodyGyro-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 6L, 
-43L, 18L, 12L, 8L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyGyro-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-25-tBodyGyro-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -1170,13 +1006,7 @@ Min. and max.                -0.99; 0.56
 
 \emini
 \bminitwo
-```{r 'Var-26-tBodyGyro-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 
-20L, 42L, 20L, 3L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyGyro-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-26-tBodyGyro-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -1208,13 +1038,7 @@ Min. and max.               -0.16; -0.02
 
 \emini
 \bminitwo
-```{r 'Var-27-tBodyGyroJerk-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.16, -0.14, -0.12, 
--0.1, -0.08, -0.06, -0.04), xmax = c(-0.14, -0.12, -0.1, -0.08, 
--0.06, -0.04, -0.02), ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(10L, 
-10L, 55L, 76L, 16L, 7L, 6L)), class = "data.frame", row.names = c(NA, 
--7L)), vnam = "tBodyGyroJerk-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-27-tBodyGyroJerk-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -1246,13 +1070,7 @@ Min. and max.               -0.08; -0.01
 
 \emini
 \bminitwo
-```{r 'Var-28-tBodyGyroJerk-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.08, -0.07, -0.06, 
--0.05, -0.04, -0.03, -0.02), xmax = c(-0.07, -0.06, -0.05, -0.04, 
--0.03, -0.02, -0.01), ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(5L, 
-5L, 21L, 78L, 62L, 6L, 3L)), class = "data.frame", row.names = c(NA, 
--7L)), vnam = "tBodyGyroJerk-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-28-tBodyGyroJerk-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -1284,14 +1102,7 @@ Min. and max.               -0.09; -0.01
 
 \emini
 \bminitwo
-```{r 'Var-29-tBodyGyroJerk-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-0.1, -0.09, -0.08, 
--0.07, -0.06, -0.05, -0.04, -0.03, -0.02, -0.01), xmax = c(-0.09, 
--0.08, -0.07, -0.06, -0.05, -0.04, -0.03, -0.02, -0.01, 0), ymin = c(0, 
-0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(2L, 1L, 17L, 33L, 74L, 36L, 
-11L, 4L, 1L, 1L)), class = "data.frame", row.names = c(NA, -10L
-)), vnam = "tBodyGyroJerk-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-29-tBodyGyroJerk-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -1323,14 +1134,7 @@ Min. and max.                   -1; 0.18
 
 \emini
 \bminitwo
-```{r 'Var-30-tBodyGyroJerk-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999, 
-0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-0L, 3L, 13L, 20L, 18L, 14L, 15L, 4L, 0L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--12L)), vnam = "tBodyGyroJerk-std()-X")
-```
+![](CodeBook_files/figure-html/Var-30-tBodyGyroJerk-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -1362,13 +1166,7 @@ Min. and max.                    -1; 0.3
 
 \emini
 \bminitwo
-```{r 'Var-31-tBodyGyroJerk-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(97L, 36L, 30L, 10L, 
-    5L, 1L, 1L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "tBodyGyroJerk-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-31-tBodyGyroJerk-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -1400,14 +1198,7 @@ Min. and max.                   -1; 0.19
 
 \emini
 \bminitwo
-```{r 'Var-32-tBodyGyroJerk-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999, 
-0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-0L, 4L, 14L, 18L, 20L, 17L, 8L, 4L, 1L, 2L, 2L)), class = "data.frame", row.names = c(NA, 
--12L)), vnam = "tBodyGyroJerk-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-32-tBodyGyroJerk-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -1439,13 +1230,7 @@ Min. and max.                -0.99; 0.64
 
 \emini
 \bminitwo
-```{r 'Var-33-tBodyAccMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 
-0L, 2L, 17L, 37L, 26L, 8L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tBodyAccMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-33-tBodyAccMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -1477,13 +1262,7 @@ Min. and max.                -0.99; 0.43
 
 \emini
 \bminitwo
-```{r 'Var-34-tBodyAccMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(88L, 2L, 
-12L, 34L, 21L, 13L, 8L, 2L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyAccMag-std()")
-```
+![](CodeBook_files/figure-html/Var-34-tBodyAccMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -1515,13 +1294,7 @@ Min. and max.                -0.99; 0.64
 
 \emini
 \bminitwo
-```{r 'Var-35-tGravityAccMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 
-0L, 2L, 17L, 37L, 26L, 8L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "tGravityAccMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-35-tGravityAccMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -1553,13 +1326,7 @@ Min. and max.                -0.99; 0.43
 
 \emini
 \bminitwo
-```{r 'Var-36-tGravityAccMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(88L, 2L, 
-12L, 34L, 21L, 13L, 8L, 2L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tGravityAccMag-std()")
-```
+![](CodeBook_files/figure-html/Var-36-tGravityAccMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -1591,13 +1358,7 @@ Min. and max.                -0.99; 0.43
 
 \emini
 \bminitwo
-```{r 'Var-37-tBodyAccJerkMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 
-17L, 33L, 29L, 7L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyAccJerkMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-37-tBodyAccJerkMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -1629,13 +1390,7 @@ Min. and max.                -0.99; 0.45
 
 \emini
 \bminitwo
-```{r 'Var-38-tBodyAccJerkMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 
-20L, 26L, 26L, 12L, 4L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyAccJerkMag-std()")
-```
+![](CodeBook_files/figure-html/Var-38-tBodyAccJerkMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -1667,13 +1422,7 @@ Min. and max.                -0.98; 0.42
 
 \emini
 \bminitwo
-```{r 'Var-39-tBodyGyroMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 0L, 
-7L, 42L, 28L, 11L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "tBodyGyroMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-39-tBodyGyroMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -1705,13 +1454,7 @@ Min. and max.                 -0.98; 0.3
 
 \emini
 \bminitwo
-```{r 'Var-40-tBodyGyroMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 32L, 38L, 
-    14L, 2L, 2L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "tBodyGyroMag-std()")
-```
+![](CodeBook_files/figure-html/Var-40-tBodyGyroMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -1743,14 +1486,7 @@ Min. and max.                   -1; 0.09
 
 \emini
 \bminitwo
-```{r 'Var-41-tBodyGyroJerkMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0), xmax = c(-0.9, -0.8, 
--0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1), ymin = c(0, 
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 0L, 6L, 19L, 26L, 
-16L, 12L, 4L, 3L, 2L, 2L)), class = "data.frame", row.names = c(NA, 
--11L)), vnam = "tBodyGyroJerkMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-41-tBodyGyroJerkMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -1782,14 +1518,7 @@ Min. and max.                   -1; 0.25
 
 \emini
 \bminitwo
-```{r 'Var-42-tBodyGyroJerkMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 
-0.3), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-3L, 15L, 20L, 21L, 14L, 5L, 5L, 3L, 2L, 1L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--13L)), vnam = "tBodyGyroJerkMag-std()")
-```
+![](CodeBook_files/figure-html/Var-42-tBodyGyroJerkMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -1821,13 +1550,7 @@ Min. and max.                   -1; 0.54
 
 \emini
 \bminitwo
-```{r 'Var-43-fBodyAcc-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 
-9L, 36L, 23L, 16L, 4L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyAcc-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-43-fBodyAcc-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -1859,13 +1582,7 @@ Min. and max.                -0.99; 0.52
 
 \emini
 \bminitwo
-```{r 'Var-44-fBodyAcc-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 1L, 
-1L, 14L, 40L, 25L, 7L, 3L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyAcc-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-44-fBodyAcc-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -1897,13 +1614,7 @@ Min. and max.                -0.99; 0.28
 
 \emini
 \bminitwo
-```{r 'Var-45-fBodyAcc-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 28L, 40L, 
-    13L, 5L, 2L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "fBodyAcc-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-45-fBodyAcc-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -1935,13 +1646,7 @@ Min. and max.                  -1; 0.66
 
 \emini
 \bminitwo
-```{r 'Var-46-fBodyAcc-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-0L, 7L, 37L, 22L, 13L, 7L, 3L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "fBodyAcc-std()-X")
-```
+![](CodeBook_files/figure-html/Var-46-fBodyAcc-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -1973,13 +1678,7 @@ Min. and max.                -0.99; 0.56
 
 \emini
 \bminitwo
-```{r 'Var-47-fBodyAcc-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 1L, 
-0L, 14L, 41L, 24L, 8L, 3L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyAcc-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-47-fBodyAcc-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -2011,13 +1710,7 @@ Min. and max.                -0.99; 0.69
 
 \emini
 \bminitwo
-```{r 'Var-48-fBodyAcc-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 
-1L, 19L, 40L, 19L, 9L, 1L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "fBodyAcc-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-48-fBodyAcc-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -2049,13 +1742,7 @@ Min. and max.                -0.99; 0.47
 
 \emini
 \bminitwo
-```{r 'Var-49-fBodyAccJerk-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 
-21L, 35L, 23L, 6L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyAccJerk-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-49-fBodyAccJerk-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -2087,13 +1774,7 @@ Min. and max.               -0.99; 0.28
 
 \emini
 \bminitwo
-```{r 'Var-50-fBodyAccJerk-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 14L, 28L, 
-    34L, 9L, 3L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "fBodyAccJerk-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-50-fBodyAccJerk-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -2125,14 +1806,7 @@ Min. and max.                -0.99; 0.16
 
 \emini
 \bminitwo
-```{r 'Var-51-fBodyAccJerk-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999, 
-0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-0L, 6L, 17L, 15L, 17L, 16L, 11L, 3L, 2L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--12L)), vnam = "fBodyAccJerk-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-51-fBodyAccJerk-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -2164,13 +1838,7 @@ Min. and max.                   -1; 0.48
 
 \emini
 \bminitwo
-```{r 'Var-52-fBodyAccJerk-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 
-21L, 30L, 25L, 11L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyAccJerk-std()-X")
-```
+![](CodeBook_files/figure-html/Var-52-fBodyAccJerk-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -2202,13 +1870,7 @@ Min. and max.                -0.99; 0.35
 
 \emini
 \bminitwo
-```{r 'Var-53-fBodyAccJerk-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 11L, 28L, 
-    33L, 9L, 7L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "fBodyAccJerk-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-53-fBodyAccJerk-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -2240,14 +1902,7 @@ Min. and max.               -0.99; -0.01
 
 \emini
 \bminitwo
-```{r 'Var-54-fBodyAccJerk-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1), xmax = c(-0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0), ymin = c(0, 0, 0, 0, 
-0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 13L, 20L, 22L, 15L, 10L, 
-3L, 1L, 4L)), class = "data.frame", row.names = c(NA, -10L)), 
-    vnam = "fBodyAccJerk-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-54-fBodyAccJerk-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -2279,13 +1934,7 @@ Min. and max.                -0.99; 0.47
 
 \emini
 \bminitwo
-```{r 'Var-55-fBodyGyro-mean()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 
-29L, 41L, 16L, 1L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyGyro-mean()-X")
-```
+![](CodeBook_files/figure-html/Var-55-fBodyGyro-mean()-X-1.png)<!-- -->
 
 \emini
 
@@ -2317,13 +1966,7 @@ Min. and max.                -0.99; 0.33
 
 \emini
 \bminitwo
-```{r 'Var-56-fBodyGyro-mean()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 13L, 38L, 22L, 
-    10L, 6L, 1L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "fBodyGyro-mean()-Y")
-```
+![](CodeBook_files/figure-html/Var-56-fBodyGyro-mean()-Y-1.png)<!-- -->
 
 \emini
 
@@ -2355,13 +1998,7 @@ Min. and max.                -0.99; 0.49
 
 \emini
 \bminitwo
-```{r 'Var-57-fBodyGyro-mean()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 2L, 
-17L, 41L, 21L, 6L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyGyro-mean()-Z")
-```
+![](CodeBook_files/figure-html/Var-57-fBodyGyro-mean()-Z-1.png)<!-- -->
 
 \emini
 
@@ -2393,14 +2030,7 @@ Min. and max.                 -0.99; 0.2
 
 \emini
 \bminitwo
-```{r 'Var-58-fBodyGyro-std()-X', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999, 
-0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(85L, 
-5L, 1L, 10L, 28L, 21L, 22L, 6L, 1L, 0L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--12L)), vnam = "fBodyGyro-std()-X")
-```
+![](CodeBook_files/figure-html/Var-58-fBodyGyro-std()-X-1.png)<!-- -->
 
 \emini
 
@@ -2432,13 +2062,7 @@ Min. and max.                -0.99; 0.65
 
 \emini
 \bminitwo
-```{r 'Var-59-fBodyGyro-std()-Y', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4, 0.6), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 
-0.2, 0.4, 0.6, 0.8), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-4L, 42L, 21L, 12L, 8L, 2L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--9L)), vnam = "fBodyGyro-std()-Y")
-```
+![](CodeBook_files/figure-html/Var-59-fBodyGyro-std()-Y-1.png)<!-- -->
 
 \emini
 
@@ -2470,13 +2094,7 @@ Min. and max.                -0.99; 0.52
 
 \emini
 \bminitwo
-```{r 'Var-60-fBodyGyro-std()-Z', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 5L, 
-37L, 36L, 6L, 4L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyGyro-std()-Z")
-```
+![](CodeBook_files/figure-html/Var-60-fBodyGyro-std()-Z-1.png)<!-- -->
 
 \emini
 
@@ -2508,13 +2126,7 @@ Min. and max.                -0.99; 0.59
 
 \emini
 \bminitwo
-```{r 'Var-61-fBodyAccMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(89L, 1L, 
-10L, 31L, 22L, 16L, 9L, 2L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyAccMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-61-fBodyAccMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -2546,14 +2158,7 @@ Min. and max.                -0.99; 0.18
 
 \emini
 \bminitwo
-```{r 'Var-62-fBodyAccMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999, 
-0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(82L, 
-6L, 1L, 3L, 13L, 20L, 20L, 8L, 8L, 9L, 7L, 3L)), class = "data.frame", row.names = c(NA, 
--12L)), vnam = "fBodyAccMag-std()")
-```
+![](CodeBook_files/figure-html/Var-62-fBodyAccMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -2585,13 +2190,7 @@ Min. and max.                -0.99; 0.54
 
 \emini
 \bminitwo
-```{r 'Var-63-fBodyBodyAccJerkMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2, 0.4), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 
-0.4, 0.6), ymin = c(0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 
-16L, 25L, 26L, 17L, 4L, 1L)), class = "data.frame", row.names = c(NA, 
--8L)), vnam = "fBodyBodyAccJerkMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-63-fBodyBodyAccJerkMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -2623,13 +2222,7 @@ Min. and max.                -0.99; 0.32
 
 \emini
 \bminitwo
-```{r 'Var-64-fBodyBodyAccJerkMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 1L, 25L, 22L, 
-    27L, 12L, 3L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "fBodyBodyAccJerkMag-std()")
-```
+![](CodeBook_files/figure-html/Var-64-fBodyBodyAccJerkMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -2661,14 +2254,7 @@ Min. and max.                 -0.99; 0.2
 
 \emini
 \bminitwo
-```{r 'Var-65-fBodyBodyGyroMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 
-0.3), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(88L, 
-2L, 0L, 8L, 20L, 18L, 22L, 9L, 4L, 5L, 1L, 2L, 1L)), class = "data.frame", row.names = c(NA, 
--13L)), vnam = "fBodyBodyGyroMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-65-fBodyBodyGyroMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -2700,14 +2286,7 @@ Min. and max.                -0.98; 0.24
 
 \emini
 \bminitwo
-```{r 'Var-66-fBodyBodyGyroMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 
-0.3), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(80L, 
-10L, 1L, 6L, 18L, 24L, 23L, 7L, 7L, 2L, 1L, 0L, 1L)), class = "data.frame", row.names = c(NA, 
--13L)), vnam = "fBodyBodyGyroMag-std()")
-```
+![](CodeBook_files/figure-html/Var-66-fBodyBodyGyroMag-std()-1.png)<!-- -->
 
 \emini
 
@@ -2739,14 +2318,7 @@ Min. and max.                   -1; 0.15
 
 \emini
 \bminitwo
-```{r 'Var-67-fBodyBodyGyroJerkMag-mean()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.9, -0.8, -0.7, 
--0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999), xmax = c(-0.9, 
--0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.0999999999999999, 
-0.2), ymin = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), ymax = c(90L, 
-2L, 15L, 22L, 18L, 15L, 6L, 5L, 4L, 1L, 1L, 1L)), class = "data.frame", row.names = c(NA, 
--12L)), vnam = "fBodyBodyGyroJerkMag-mean()")
-```
+![](CodeBook_files/figure-html/Var-67-fBodyBodyGyroJerkMag-mean()-1.png)<!-- -->
 
 \emini
 
@@ -2778,13 +2350,7 @@ Min. and max.                   -1; 0.29
 
 \emini
 \bminitwo
-```{r 'Var-68-fBodyBodyGyroJerkMag-std()', echo=FALSE, fig.width=4, fig.height=3, message=FALSE, warning=FALSE}
-ggAggHist(data = structure(list(xmin = c(-1, -0.8, -0.6, -0.4, 
--0.2, 0, 0.2), xmax = c(-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4), 
-    ymin = c(0, 0, 0, 0, 0, 0, 0), ymax = c(94L, 41L, 29L, 10L, 
-    5L, 0L, 1L)), class = "data.frame", row.names = c(NA, -7L
-)), vnam = "fBodyBodyGyroJerkMag-std()")
-```
+![](CodeBook_files/figure-html/Var-68-fBodyBodyGyroJerkMag-std()-1.png)<!-- -->
 
 \emini
 
